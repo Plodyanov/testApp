@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ProfileFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/profile"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="15sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="15dp"
+        android:padding="0.5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_photo_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar"
+        app:shapeAppearance="@style/ShapeAppearance.Circle"
+        app:strokeColor="@color/profile_picture_border"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/change_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_profile_menu_item"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/change_photo"
+        android:textColor="@color/text_gray"
+        android:textFontWeight="500"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_picture" />
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/profile_name"
+        android:textFontWeight="700"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/change_photo"
+        tools:text="Satria Adhi Pradana" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_upload"
+        style="@style/button_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="42dp"
+        android:drawableStart="@drawable/ic_upload"
+        android:paddingHorizontal="50dp"
+        android:text="@string/upload_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_user_name" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="14dp"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_upload">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/trade_store"
+                style="@style/profile_item"
+                android:text="@string/trade_store"
+                app:drawableEndCompat="@drawable/ic_profile_item"
+                app:drawableStartCompat="@drawable/ic_profile_credit_card" />
+
+            <TextView
+                android:id="@+id/payment_method"
+                style="@style/profile_item"
+                android:layout_marginTop="25dp"
+                android:text="@string/payment_method"
+                app:drawableEndCompat="@drawable/ic_profile_item"
+                app:drawableStartCompat="@drawable/ic_profile_credit_card" />
+
+            <include
+                android:id="@+id/balance"
+                layout="@layout/profile_item_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:id="@+id/trade_history"
+                style="@style/profile_item"
+                android:layout_marginTop="25dp"
+                android:text="@string/trade_history"
+                app:drawableEndCompat="@drawable/ic_profile_item"
+                app:drawableStartCompat="@drawable/ic_profile_credit_card" />
+
+            <TextView
+                android:id="@+id/restore_purchase"
+                style="@style/profile_item"
+                android:layout_marginTop="25dp"
+                android:text="@string/restore_purchase"
+                app:drawableEndCompat="@drawable/ic_profile_item"
+                app:drawableStartCompat="@drawable/ic_profile_restore" />
+
+            <TextView
+                android:id="@+id/help"
+                style="@style/profile_item"
+                android:layout_marginTop="25dp"
+                android:text="@string/help"
+                app:drawableStartCompat="@drawable/ic_profile_help" />
+
+            <TextView
+                android:id="@+id/log_out"
+                style="@style/profile_item"
+                android:layout_marginTop="25dp"
+                android:text="@string/log_out"
+                app:drawableStartCompat="@drawable/ic_profile_login" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

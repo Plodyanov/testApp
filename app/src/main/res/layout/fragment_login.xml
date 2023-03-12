@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.signin.LoginFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="107dp"
+        android:paddingBottom="35dp">
+
+        <TextView
+            style="@style/title_default"
+            android:text="@string/welcome_back" />
+
+        <EditText
+            android:id="@+id/edit_text_first_name"
+            style="@style/input_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="42dp"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName|textCapWords" />
+
+        <include
+            android:id="@+id/input_field_password"
+            layout="@layout/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="43dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_login"
+            style="@style/button_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="99dp"
+            android:layout_marginEnd="43dp"
+            android:text="@string/login" />
+
+
+    </LinearLayout>
+</ScrollView>

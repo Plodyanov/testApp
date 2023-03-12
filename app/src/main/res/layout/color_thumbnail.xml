@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/color_thumbnail"
+    android:layout_width="34dp"
+    android:layout_height="26dp"
+    android:layout_marginEnd="4dp"
+    app:cardBackgroundColor="@color/dark_gray"
+    app:cardCornerRadius="6dp"
+    app:strokeColor="@color/color_thumbnail_stroke"
+    app:strokeWidth="2dp" />

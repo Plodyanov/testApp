@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.signin.SignInFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="107dp"
+        android:paddingBottom="35dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:text="@string/sign_in"
+            style="@style/title_default" />
+
+        <EditText
+            android:id="@+id/edit_text_first_name"
+            style="@style/input_default"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="42dp"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName|textCapWords" />
+
+        <EditText
+            android:id="@+id/edit_text_last_name"
+            style="@style/input_default"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="42dp"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName|textCapWords" />
+
+        <EditText
+            android:id="@+id/edit_text_email"
+            style="@style/input_default"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="42dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_sign_in"
+            style="@style/button_default"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="43dp"
+            android:text="@string/sign_in" />
+
+        <TextView
+            android:id="@+id/text_log_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserrat"
+            android:textFontWeight="500"
+            android:layout_marginTop="15dp"
+            android:text="@string/already_have_account" />
+
+        <TextView
+            android:id="@+id/sign_with_google"
+            style="@style/text_item_default"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/sign_in_with_google"
+            app:drawableStartCompat="@drawable/ic_google" />
+
+        <TextView
+            android:id="@+id/sign_with_apple"
+            style="@style/text_item_default"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="38dp"
+            android:text="@string/sign_in_with_apple"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_apple" />
+    </LinearLayout>
+
+</ScrollView>
